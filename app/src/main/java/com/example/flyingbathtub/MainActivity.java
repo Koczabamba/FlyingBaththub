@@ -12,11 +12,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button Jeden = findViewById(R.id.button);
+        Button Jeden = findViewById(R.id.button2);
         Jeden.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((Button)findViewById(R.id.button)).setBackgroundColor(Color.parseColor("#ffffff"));
+                ((Button)findViewById(R.id.button2)).setBackgroundColor(Color.parseColor("#ffffff"));
             }
         });
 
