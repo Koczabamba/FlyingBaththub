@@ -138,6 +138,13 @@ public class MainActivity extends AppCompatActivity {
                 ((TextView)findViewById(R.id.calcScreen)).setText("=");
             }
         });
+        Button Czysc= findViewById(R.id.buttonClear);
+        Czysc.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View v){
+                ((TextView) findViewById(R.id.calcScreen)).setText("");
+            }
+        });
         // koniec polimera
 
     }
