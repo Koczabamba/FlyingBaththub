@@ -9,6 +9,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private void tylko_wynik(){
+        ((TextView)findViewById(R.id.previousValue)).setText("");
+        ((TextView)findViewById(R.id.activityScreen)).setText("");
+    }
+
     private void przenies_wartosc(){
         ((TextView)findViewById(R.id.previousValue)).setText(((TextView)findViewById(R.id.calcScreen)).getText());
         ((TextView)findViewById(R.id.calcScreen)).setText("");
@@ -158,7 +163,8 @@ public class MainActivity extends AppCompatActivity {
         Rownosc.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                ((TextView)findViewById(R.id.calcScreen)).setText("=");
+                tylko_wynik();
+                ((TextView)findViewById(R.id.calcScreen)).setText("= ");
             }
         });
         Button Czysc= findViewById(R.id.buttonClear);
