@@ -14,6 +14,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:clickable="true"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Hakuna Matata!"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -238,4 +242,17 @@
         app:layout_constraintBottom_toTopOf="@+id/button0"
         app:layout_constraintStart_toEndOf="@+id/button0"
         app:layout_constraintTop_toBottomOf="@+id/button0" />
+
+    <TextView
+        android:id="@+id/activityScreen"
+        android:layout_width="61dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorActivity"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcScreen" />
 </android.support.constraint.ConstraintLayout>

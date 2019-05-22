@@ -6,4 +6,5 @@
     <color name="colorNumberButton">#FFFF00</color>
     <color name="colorActionButton">#FF5005</color>
     <color name="colorEqualButton">#FF0010</color>
+    <color name="colorActivity">#6D0098</color>
 </resources>

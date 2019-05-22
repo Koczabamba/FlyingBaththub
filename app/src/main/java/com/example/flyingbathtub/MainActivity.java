@@ -9,10 +9,13 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-
     private void wyslij_znak(String znak) {
+        ((TextView) findViewById(R.id.activityScreen)).setText(znak);
+    }
+
+    private void wyslij_liczbe(String liczba) {
 //        aleksandra="2";
-        ((TextView) findViewById(R.id.calcScreen)).setText(((TextView)findViewById(R.id.calcScreen)).getText() + znak);
+        ((TextView) findViewById(R.id.calcScreen)).setText(((TextView)findViewById(R.id.calcScreen)).getText() + liczba);
 
     }
 
@@ -26,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Multi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                ((Button)findViewById(R.id.buttonMultiplication)).setBackgroundColor(Color.parseColor("#ffffff"));
+//                ((Button)findViewById(R.id.buttonMultiplication)).setBackgroundColor(Color.parseColor("#ffffff"));
                 wyslij_znak("*");
             }
         });
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         Plus.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                ((Button)findViewById(R.id.buttonPlus)).setBackgroundColor(Color.parseColor("#ffffff"));
+//                ((Button)findViewById(R.id.buttonPlus)).setBackgroundColor(Color.parseColor("#ffffff"));
                 wyslij_znak("+");
             }
         });
@@ -42,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         Division.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                ((Button)findViewById(R.id.buttonDivision)).setBackgroundColor(Color.parseColor("#ffffff"));
+//                ((Button)findViewById(R.id.buttonDivision)).setBackgroundColor(Color.parseColor("#ffffff"));
                 wyslij_znak(":");
             }
         });
@@ -50,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         Minus.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                ((Button)findViewById(R.id.buttonMinus)).setBackgroundColor(Color.parseColor("#ffffff"));
+//                ((Button)findViewById(R.id.buttonMinus)).setBackgroundColor(Color.parseColor("#ffffff"));
                 wyslij_znak("-");
             }
         });
@@ -58,77 +61,77 @@ public class MainActivity extends AppCompatActivity {
         Jeden.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                wyslij_znak("1");
+                wyslij_liczbe("1");
             }
         });
         Button Dwa= findViewById(R.id.button2);
         Dwa.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                wyslij_znak("2");
+                wyslij_liczbe("2");
             }
         });
         Button Trzy= findViewById(R.id.button3);
         Trzy.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                wyslij_znak("3");
+                wyslij_liczbe("3");
             }
         });
         Button Cztery= findViewById(R.id.button4);
         Cztery.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                wyslij_znak("4");
+                wyslij_liczbe("4");
             }
         });
         Button Piec= findViewById(R.id.button5);
         Piec.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                wyslij_znak("5");
+                wyslij_liczbe("5");
             }
         });
         Button Szesc= findViewById(R.id.button6);
         Szesc.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                wyslij_znak("6");
+                wyslij_liczbe("6");
             }
         });
         Button Siedem= findViewById(R.id.button7);
         Siedem.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                wyslij_znak("7");
+                wyslij_liczbe("7");
             }
         });
         Button Osiem= findViewById(R.id.button8);
         Osiem.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                wyslij_znak("8");
+                wyslij_liczbe("8");
             }
         });
         Button Dziewiec= findViewById(R.id.button9);
         Dziewiec.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                wyslij_znak("9");
+                wyslij_liczbe("9");
             }
         });
         Button Zero= findViewById(R.id.button0);
         Zero.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                wyslij_znak("0");
+                wyslij_liczbe("0");
             }
         });
         Button Przecinek= findViewById(R.id.buttonPoint);
         Przecinek.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                wyslij_znak(",");
+                wyslij_liczbe(",");
             }
         });
         Button Rownosc= findViewById(R.id.buttonEqual);
@@ -145,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
                 ((TextView) findViewById(R.id.calcScreen)).setText("");
             }
         });
-        // koniec polimera
-
+        TextView Ekran= findViewById(R.id.calcScreen);
+        // koniec polimeru
     }
 }
