@@ -12,7 +12,6 @@
         android:layout_width="334dp"
         android:layout_height="100dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="@color/colorAccent"
         android:clickable="true"
@@ -20,9 +19,9 @@
         android:text="Hakuna Matata!"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.704"
+        app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/previousValue" />
 
     <Button
         android:id="@+id/buttonMultiplication"
@@ -248,19 +247,21 @@
         android:id="@+id/activityScreen"
         android:layout_width="61dp"
         android:layout_height="46dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
         android:textAlignment="center"
         android:textColor="@color/colorActivity"
         android:textSize="36sp"
         app:layout_constraintStart_toEndOf="@+id/previousValue"
-        app:layout_constraintTop_toBottomOf="@+id/calcScreen" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/previousValue"
         android:layout_width="227dp"
         android:layout_height="46dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calcScreen" />
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

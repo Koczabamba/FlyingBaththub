@@ -167,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick (View v){
                 if(((TextView) findViewById(R.id.calcScreen)).getText() == ""){
                     ((TextView) findViewById(R.id.activityScreen)).setText("");
+                    ((TextView) findViewById(R.id.previousValue)).setText("");
                 };
                 ((TextView) findViewById(R.id.calcScreen)).setText("");
             }
