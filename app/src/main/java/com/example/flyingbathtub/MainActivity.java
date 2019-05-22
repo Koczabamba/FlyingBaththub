@@ -9,6 +9,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private void przenies_wartosc(){
+        ((TextView)findViewById(R.id.previousValue)).setText(((TextView)findViewById(R.id.calcScreen)).getText());
+        ((TextView)findViewById(R.id.calcScreen)).setText("");
+    }
+
     private void wyslij_znak(String znak) {
         ((TextView) findViewById(R.id.activityScreen)).setText(znak);
     }
@@ -30,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
 //                ((Button)findViewById(R.id.buttonMultiplication)).setBackgroundColor(Color.parseColor("#ffffff"));
+            if(((TextView)findViewById(R.id.calcScreen)).getText()!="") {
                 wyslij_znak("*");
+                przenies_wartosc();
+                }
             }
         });
         Button Plus= findViewById(R.id.buttonPlus);
@@ -38,7 +46,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
 //                ((Button)findViewById(R.id.buttonPlus)).setBackgroundColor(Color.parseColor("#ffffff"));
+            if(((TextView)findViewById(R.id.calcScreen)).getText()!="") {
                 wyslij_znak("+");
+                przenies_wartosc();
+                }
             }
         });
         Button Division= findViewById(R.id.buttonDivision);
@@ -46,7 +57,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
 //                ((Button)findViewById(R.id.buttonDivision)).setBackgroundColor(Color.parseColor("#ffffff"));
+            if(((TextView)findViewById(R.id.calcScreen)).getText()!=""){
                 wyslij_znak(":");
+                przenies_wartosc();
+                }
             }
         });
         Button Minus= findViewById(R.id.buttonMinus);
@@ -54,7 +68,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
 //                ((Button)findViewById(R.id.buttonMinus)).setBackgroundColor(Color.parseColor("#ffffff"));
+            if(((TextView)findViewById(R.id.calcScreen)).getText()!=""){
                 wyslij_znak("-");
+                przenies_wartosc();
+                }
             }
         });
         Button Jeden= findViewById(R.id.button1);
@@ -131,7 +148,10 @@ public class MainActivity extends AppCompatActivity {
         Przecinek.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                wyslij_liczbe(",");
+//            if(((TextView)findViewById(R.id.calcScreen)).getText())
+               if(((TextView)findViewById(R.id.calcScreen)).getText()!="") {
+                   wyslij_liczbe(".");
+               }
             }
         });
         Button Rownosc= findViewById(R.id.buttonEqual);
@@ -145,6 +165,9 @@ public class MainActivity extends AppCompatActivity {
         Czysc.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View v){
+                if(((TextView) findViewById(R.id.calcScreen)).getText() == ""){
+                    ((TextView) findViewById(R.id.activityScreen)).setText("");
+                };
                 ((TextView) findViewById(R.id.calcScreen)).setText("");
             }
         });

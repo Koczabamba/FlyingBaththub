@@ -10,16 +10,17 @@
     <TextView
         android:id="@+id/calcScreen"
         android:layout_width="334dp"
-        android:layout_height="127dp"
+        android:layout_height="100dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="@color/colorAccent"
         android:clickable="true"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="Hakuna Matata!"
-        android:textSize="45sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.704"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -220,7 +221,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginBottom="60dp"
         android:background="@color/colorEqualButton"
         android:text="="
         android:textSize="40sp"
@@ -247,12 +248,19 @@
         android:id="@+id/activityScreen"
         android:layout_width="61dp"
         android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="12dp"
         android:textAlignment="center"
         android:textColor="@color/colorActivity"
         android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/previousValue"
+        app:layout_constraintTop_toBottomOf="@+id/calcScreen" />
+
+    <TextView
+        android:id="@+id/previousValue"
+        android:layout_width="227dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="40dp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calcScreen" />
 </android.support.constraint.ConstraintLayout>
