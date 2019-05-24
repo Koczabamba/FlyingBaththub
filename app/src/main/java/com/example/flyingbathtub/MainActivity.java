@@ -155,7 +155,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v){
 //            if(((TextView)findViewById(R.id.calcScreen)).getText())
                if(((TextView)findViewById(R.id.calcScreen)).getText()!="") {
-                   wyslij_liczbe(".");
+                   String  sprawdz= (String) ((TextView)findViewById(R.id.calcScreen)).getText();
+                   if(sprawdz.contains(".")==false) {
+                       wyslij_liczbe(".");
+                   }
                }
             }
         });
