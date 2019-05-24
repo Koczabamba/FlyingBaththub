@@ -153,8 +153,7 @@ public class MainActivity extends AppCompatActivity {
         Przecinek.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-//            if(((TextView)findViewById(R.id.calcScreen)).getText())
-               if(((TextView)findViewById(R.id.calcScreen)).getText()!="") {
+                if(((TextView)findViewById(R.id.calcScreen)).getText()!="") {
                    String  sprawdz= (String) ((TextView)findViewById(R.id.calcScreen)).getText();
                    if(sprawdz.contains(".")==false) {
                        wyslij_liczbe(".");

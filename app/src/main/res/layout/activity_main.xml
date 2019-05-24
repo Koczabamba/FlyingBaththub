@@ -16,7 +16,7 @@
         android:backgroundTint="@color/colorAccent"
         android:clickable="true"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Hakuna Matata!"
+        android:text=""
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.59"
