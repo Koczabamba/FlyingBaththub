@@ -3,6 +3,7 @@ package com.example.flyingbathtub;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private void tylko_wynik(){
         ((TextView)findViewById(R.id.previousValue)).setText("");
         ((TextView)findViewById(R.id.activityScreen)).setText("");
+        ((TextView)findViewById(R.id.calcScreen)).setText("");
     }
 
     private void przenies_wartosc(){
@@ -165,8 +167,15 @@ public class MainActivity extends AppCompatActivity {
         Rownosc.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                String pierwsza= (String)((TextView) findViewById(R.id.previousValue)).getText();
+                String znak= (String)((TextView) findViewById(R.id.activityScreen)).getText();
+                String druga= (String)((TextView) findViewById(R.id.calcScreen)).getText();
                 tylko_wynik();
-                ((TextView)findViewById(R.id.calcScreen)).setText("= ");
+//                ((TextView)findViewById(R.id.calcScreen)).setText("= ");
+
+                 Procesor oblicz = new Procesor(pierwsza, znak, druga);
+                                 ((TextView) findViewById(R.id.calcScreen)).setText(oblicz.ladny_wynik());
+//                 ((TextView) findViewById(R.id.calcScreen)).setText(String.valueOf(oblicz.wynik()));
             }
         });
         Button Czysc= findViewById(R.id.buttonClear);
