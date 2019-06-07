@@ -25,8 +25,10 @@ public class Procesor extends Dekoder {
             return (a*b);
         };
         if(dzialanie.equals(":")){
-            if(b==0)
-                return 999999999;
+            if(b==0) {
+                final double positiveInfinity = Double.POSITIVE_INFINITY;
+                return positiveInfinity;
+            }
             return (a/b);
         };
     return 17.78;
